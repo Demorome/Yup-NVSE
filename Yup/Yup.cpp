@@ -8,8 +8,8 @@
 #include "params.h"
 
 // rand code taken from https://www.cplusplus.com/reference/cstdlib/srand/
-#include <stdlib.h>     /* srand, rand */
-#include <time.h>       /* time */
+#include <cstdlib>     /* srand, rand */
+#include <ctime>       /* time */
 
  
 // Plugin Stuff
@@ -51,7 +51,7 @@ __forceinline void BaseAddItem(TESContainer* container, TESForm* item, UInt32 co
 	container->formCountList.Insert(formCount);
 }
 
-std::string voiceLineBasePath = "\sound\voice\falloutnv.esm\maleold02";
+std::string voiceLineBasePath = "Data\\Sound\\Voice\\FalloutNV.esm\\MaleOld02\\";
 
 std::vector<std::string> voiceLinesPaths = 
 {
