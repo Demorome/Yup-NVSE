@@ -51,6 +51,8 @@ __forceinline void BaseAddItem(TESContainer* container, TESForm* item, UInt32 co
 	container->formCountList.Insert(formCount);
 }
 
+std::string voiceLineBasePath = "\sound\voice\falloutnv.esm\maleold02";
+
 std::vector<std::string> voiceLinesPaths = 
 {
 "VFreeformG_VFreeformGoodsp_00104C57_1",  // "yup"
@@ -106,7 +108,6 @@ void MessageHandler(NVSEMessagingInterface::Message* msg)
 					// Generate random number from 1-10, add that many dynamites.
 					BaseAddItem(container, dynamiteForm, (rand() % 10 + 1));
 				}
-			
 			}
 		}
 
@@ -115,7 +116,6 @@ void MessageHandler(NVSEMessagingInterface::Message* msg)
 
 		//todo: make lipsynch work
 
-		//todo: make
 		
 		break;
 	}
