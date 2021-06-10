@@ -64,12 +64,7 @@ std::vector<std::string> voiceLinesPaths =
 "VFreeformG_VFreeformGoodsp_00104C53_1",  // "too dangerous..." 2
 };
 
-// Changes voicelines to random variations of Easy Pete's lines.
-errno_t __cdecl Actor_DoSpeechLoadLipFiles_strcpy_s_Hook(char* Dst, rsize_t SizeInBytes, char* Src)
-{
-	const char* newSrc = //"Data\\Sound\\Voice\\FalloutNV.esm\\MaleAdult03\\1EExtraFiends_GOODBYE_0014E012_1.ogg";
-	return strcpy_s(Dst, SizeInBytes, newSrc); 
-}
+
 
 
 // This is a message handler for nvse events
@@ -112,7 +107,7 @@ void MessageHandler(NVSEMessagingInterface::Message* msg)
 		}
 
 		// Change voice lines
-		WriteRelCall(0x8A2200, (UInt32)Actor_DoSpeechLoadLipFiles_strcpy_s_Hook);   // strcpy_s_(Dst, 0x200u, Src);
+		//WriteRelCall(, (UInt32)Actor_DoSpeechLoadLipFiles_strcpy_s_Hook);   // strcpy_s_(Dst, 0x200u, Src);
 
 		//todo: make lipsynch work
 
