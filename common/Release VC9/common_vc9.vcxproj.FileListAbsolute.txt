@@ -1,0 +1,2 @@
+D:\New Vegas Notes\ShowOff NVSE\common\Release VC9\common_vc9.lib
+D:\New Vegas Notes\Get-Fucked-NVSE\common\Release VC9\common_vc9.lib
